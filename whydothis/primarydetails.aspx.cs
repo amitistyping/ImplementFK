@@ -34,9 +34,9 @@ namespace whydothis
         {
             SqlCommand sql = new SqlCommand("SELECT * FROM interests", connection);
             SqlDataAdapter adapter = new SqlDataAdapter(sql);
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
-            CheckHobbies.DataSource = ds.Tables[0];
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+            CheckHobbies.DataSource = dataSet.Tables[0];
             CheckHobbies.DataTextField = "interest_name";
             CheckHobbies.DataValueField = "interest_id";
             CheckHobbies.DataBind();
